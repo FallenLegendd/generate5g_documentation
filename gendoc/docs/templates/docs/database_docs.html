@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Documentation</title>
+</head>
+<body>
+    <h1>Database Documentation</h1>
+    <ul>
+        {% for model in models %}
+            <li>
+                <strong>{{ model.name }}</strong>
+                <ul>
+                    {% for field in model.fields %}
+                        <li>{{ field }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
